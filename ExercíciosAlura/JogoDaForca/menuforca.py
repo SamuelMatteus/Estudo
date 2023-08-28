@@ -17,15 +17,12 @@ def abrir_arquivo_e_carregar_palavra():
 def inserir_letras_acertadas(palavra):
     return ["_" for letra in palavra]
 def jogar():
-
     exibir_menu()
     palavra_secreta = abrir_arquivo_e_carregar_palavra()
-
     letras_acertadas = inserir_letras_acertadas(palavra_secreta)
     enforcou = False
     acertou = False
     erros = 0
-
     print(letras_acertadas)
 
     while (not enforcou and not acertou):
