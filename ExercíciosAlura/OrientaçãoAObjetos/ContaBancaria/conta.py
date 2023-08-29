@@ -12,17 +12,25 @@ class Conta:
     def depositar(self, valor):
         self.__saldo_conta += valor
 
-    def sacar(self, retirada):
-        self.__saldo_conta -= retirada
+    def __saque_permitido(self, valor_saque):
+        valor_disponivel = self.__saldo_conta + self.__limite
+        return valor_saque <= valor_disponivel
 
+    def __sacar(self, valor):
+        if(self.__saque_permitido()):
+            self.__saldo_conta -= valor
+        else:
+            print("O valor solicitado é acima do limite permitido.")
     def transferir(self, valor, destino):
         self.sacar(valor)
         destino.deposita(valor)
 
-    def get_saldo(self):
+    @property
+    def saldo(self):
         return self.__saldo_conta
 
-    def get_titular(self):
+    @property
+    def titular(self):
         return self.__titular_conta
 
     @property
