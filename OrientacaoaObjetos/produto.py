@@ -4,7 +4,6 @@ class Produto:
         self.estoque = estoque
         self.descricao = descricao
         self.preco = preco
-
     def mostrar_nome(self):
         print('Preço: ', self.preco)
 
