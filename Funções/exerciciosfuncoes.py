@@ -45,19 +45,33 @@ def verificar_par():
     else:
         print("Não é par!")
 
-
+#07 - Crie uma função chamada conta_vogais que recebe uma string como parâmetro
+# e retorna a quantidade de vogais presentes nessa string.
+def contar_vogais():
+    palavra = str(input("Insira a palavra: "))
+    vogais = "aeiouAEIOU"
+    contador = 0
+    for letra in palavra:
+        if letra in vogais:
+            contador += 1
+    print(f"Essa palavra tem {contador} vogais.")
+#7 - : Crie uma função chamada e_primo que recebe um número como parâmetro e retorna True se o número for primo e False caso contrário.
+# Um número primo é aquele que só é divisível por 1 e por ele mesmo (por exemplo, 2, 3, 5, 7, 11…).
+# def descobrir_numero_primo():
+#     numero = int(input("Insira o número: "))
+#         if numero
 
 opcao = 0
 while opcao != 16:
-
     print("-------------------------------")
     print("Menu de opções: ")
-    print("1. Imprimir seu nome: ")
+    print("1. Imprimir seu nome ")
     print("2. Somar dois valores")
     print("3. Multiplicar dois valores")
     print("4. Calcular média de valores")
     print("5. Descobrir o maior valor de um conjunto")
     print("6. Verificar se o número é ou não par")
+    print("7. Contador de vogais por palavra")
     print("-------------------------------")
     opcao = int(input("Bem vindo! Selecione a opção conforme o menu:"))
 
@@ -73,3 +87,5 @@ while opcao != 16:
         maior_valor()
     elif opcao == 6:
         verificar_par()
+    elif opcao == 7:
+        contar_vogais()
