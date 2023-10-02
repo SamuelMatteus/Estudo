@@ -96,7 +96,6 @@ print(frutas_qt13)
 # Utilize o método reverse() para inverter a ordem dos números na lista.
 # Imprima a lista invertida.
 
-
 numeros_qt14 = [1, 2, 3]
 numeros_qt14.reverse()
 print(numeros_qt14)
