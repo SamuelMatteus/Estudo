@@ -41,7 +41,6 @@ def verificar_par():
     numero = int(input("Insira o valor: "))
     if numero % 2 == 0:
         print("O número é par!")
-
     else:
         print("Não é par!")
 
@@ -55,6 +54,7 @@ def contar_vogais():
         if letra in vogais:
             contador += 1
     print(f"Essa palavra tem {contador} vogais.")
+
 #7 - : Crie uma função chamada e_primo que recebe um número como parâmetro e retorna True se o número for primo e False caso contrário.
 # Um número primo é aquele que só é divisível por 1 e por ele mesmo (por exemplo, 2, 3, 5, 7, 11…).
 # def descobrir_numero_primo():
